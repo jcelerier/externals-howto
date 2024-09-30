@@ -694,6 +694,10 @@ This means:
 -  It is not possible to add methods for more than one selector to a right inlet.
    Particularly, it is not possible to add a universal method for arbitrary selectors to a right inlet.
 
+Note however than if ``inlet_new`` is invoked with the ``list`` symbol as selector, then 
+as a convenience feature, both ``float`` and ``symbol`` messages will [also be supported](https://sourceforge.net/p/pure-data/patches/164/),
+but never arbitrary messages. 
+
 ::
 
       floatinlet_new(&x->x_obj, &x->step);
